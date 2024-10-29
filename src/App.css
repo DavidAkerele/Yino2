@@ -1,0 +1,179 @@
+.swiper-wrapper {
+  height: 100vh;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0; */
+}
+
+.max-width {
+  /* max-width: 1440px; */
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  z-index: 999;
+  padding: 10px 20px;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 10px 20px;
+      border-radius: 10px;
+
+      &:hover {
+        /* background-color: #9d5a4d; */
+        backdrop-filter: contrast(0.6);
+      }
+    }
+  }
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.home-left {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e6dad1;
+}
+
+.home-right {
+  flex: 1;
+  height: 100%;
+
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.about-left {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #9d5a4d;
+}
+
+.about-right {
+  position: relative;
+  /* width: 50%;  */
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transform: scale(1.5);
+  z-index: 0;
+}
+.foreground {
+  position: relative;
+  width: 80%; /* Adjust as needed for the zoomed effect */
+  height: auto;
+  z-index: 2; /* Bring the foreground image above the background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
+}
+
+#music {
+  background-position: center;
+  background-color: #bfcbd8;
+  z-index: 3;
+}
+.music-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 50%;
+  gap: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow-y: scroll;
+}
+.music-grid-item {
+  background-color: #00bf63;
+  /* width: 500px; */
+  /* height: 500px; */
+}
+
+.spotify-item {
+  background-color: #00bf63;
+  width: 500px;
+  height: 500px;
+}
+
+#writing {
+  background-position: center;
+  background-color: #e6dad1;
+  z-index: 2;
+}
+
+#photography {
+  background-position: center;
+  background-color: #222121;
+  z-index: 1;
+}
+
+#contact {
+  background-position: center;
+  background-color: #9d5a4d;
+  z-index: 0;
+}
