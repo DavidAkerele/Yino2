@@ -97,23 +97,32 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <div id='music' className='slide'>
-            <div className='max-'>
-              <div className='music-grid-container'>
+            <div className='w-[90%] mx-auto flex justify-between items-center py-20 gap-8'>
+              <div className='music-grid-container justify-evenly gap-8'>
                 {new Array(10).fill(0).map((_, index) => (
                   <div key={index} className='music-grid-item'>
-                    {/* <iframe
-                      src='https://open.spotify.com/embed/track/6jIpfTmCaebJyQxfrZb749?utm_source=generator'
+                    <iframe
+                      src='https://open.spotify.com/embed/track/3l9VCXMSoS1KBRhkCU5zuO?si=145fc4e3de1b4207'
                       width='100%'
                       height='352'
                       loading='lazy'
                       allow='encrypted-media'
-                    ></iframe> */}
-                    <SpotifyEmbed src='https://open.spotify.com/track/3l9VCXMSoS1KBRhkCU5zuO?si=145fc4e3de1b4207' />
+                    ></iframe>
+                    {/* <SpotifyEmbed
+                      src='https://open.spotify.com/track/3l9VCXMSoS1KBRhkCU5zuO?si=145fc4e3de1b4207'
+                      width={'70%'}
+                    /> */}
                   </div>
                 ))}
               </div>
               <div className='music-right'>
-                <div className='spotify-item'></div>
+                <iframe
+                  src='https://open.spotify.com/embed/album/6bPpXqJRpjwy0hLyUGtzYc?utm_source=generator'
+                  width='100%'
+                  height='500'
+                  allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+                  loading='lazy'
+                ></iframe>
 
                 <div className='lets-talk-button'></div>
               </div>

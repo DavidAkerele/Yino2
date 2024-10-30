@@ -141,17 +141,16 @@ nav {
 .music-grid-container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
-  height: 50%;
-  gap: 20px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  width: 60%;
+  max-height: calc(100vh - 160px);
   overflow-y: scroll;
 }
+.music-right {
+  width: 32%;
+}
 .music-grid-item {
-  background-color: #00bf63;
-  /* width: 500px; */
-  /* height: 500px; */
+  /* background-color: #00bf63; */
+  width: 30%;
 }
 
 .spotify-item {
