@@ -57,6 +57,10 @@ nav {
     }
   }
 }
+.active {
+  background-color: #fff;
+  color: #000;
+}
 
 #home {
   display: flex;
@@ -142,7 +146,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
-  max-height: calc(100vh - 160px);
+  max-height: calc(100vh - 200px);
   overflow-y: scroll;
 }
 .music-right {
@@ -158,6 +162,20 @@ nav {
   width: 500px;
   height: 500px;
 }
+.lets-talk-button {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  width: fit-content;
+  cursor: pointer;
+  margin-inline: auto;
+  /* margin-top: 30px; */
+  transition: all 0.25s;
+  &:hover {
+    background-color: #00bf6350;
+    color: #fff;
+  }
+}
 
 #writing {
   background-position: center;
@@ -165,10 +183,44 @@ nav {
   z-index: 2;
 }
 
+.writing-swiper > .swiper-wrapper {
+  height: fit-content;
+}
+
+.writing-item {
+  background-color: #00bf63;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 #photography {
   background-position: center;
   background-color: #222121;
   z-index: 1;
+}
+.photos-swiper > .swiper-wrapper {
+  max-height: calc(100vh - 200px);
+}
+
+.photos-swiper > .swiper-wrapper {
+  .swiper-slide {
+    transition: all 0.3s;
+  }
+  .swiper-slide-active {
+    width: 65% !important;
+    height: 100%;
+  }
+  .swiper-slide-next {
+    width: 35% !important;
+    height: 100%;
+  }
+}
+.photo {
+  /* width: 100%; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #contact {

@@ -1,15 +1,16 @@
 // Import Swiper React components
 import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Keyboard } from 'swiper/modules';
+import { Mousewheel, Keyboard, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 import 'swiper/css/keyboard';
+import 'swiper/css/navigation';
 
 import './App.css';
 import { useRef, useState } from 'react';
-import { Spotify } from 'react-spotify-embed';
-import { SpotifyEmbed } from 'spotify-embed';
+import { FaMusic, FaSnapchatGhost } from 'react-icons/fa';
+import { BsInstagram, BsTwitter } from 'react-icons/bs';
 
 function App() {
   const navItems = [
@@ -43,7 +44,42 @@ function App() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // const musicArray = []
+  const writingArray = [
+    {
+      title: 'Writing Item 1',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.',
+    },
+    {
+      title: 'Writing Item 1',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.',
+    },
+    {
+      title: 'Writing Item 1',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.',
+    },
+    {
+      title: 'Writing Item 1',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.',
+    },
+    {
+      title: 'Writing Item 1',
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.',
+    },
+  ];
+
+  const images = [
+    'https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600',
+    'https://images.pexels.com/photos/2449605/pexels-photo-2449605.png?auto=compress&cs=tinysrgb&w=600',
+    'https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=600',
+    'https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&w=600',
+    'https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&w=600',
+  ];
+
   return (
     <>
       <nav>
@@ -54,6 +90,7 @@ function App() {
               onClick={() => {
                 swiperRef.current?.swiper.slideTo(navItems.indexOf(item));
               }}
+              className={activeIndex === navItems.indexOf(item) ? 'active' : ''}
             >
               {item.name}
             </li>
@@ -96,8 +133,11 @@ function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div id='music' className='slide'>
-            <div className='w-[90%] mx-auto flex justify-between items-center py-20 gap-8'>
+          <div id='music' className='slide py-20'>
+            <h2 className='text-[#4a7cb2] w-[90%] mx-auto mb-8 text-xl font-medium'>
+              MUSIC
+            </h2>
+            <div className='w-[90%] mx-auto flex justify-between items-center gap-8'>
               <div className='music-grid-container justify-evenly gap-8'>
                 {new Array(10).fill(0).map((_, index) => (
                   <div key={index} className='music-grid-item'>
@@ -115,7 +155,7 @@ function App() {
                   </div>
                 ))}
               </div>
-              <div className='music-right'>
+              <div className='music-right flex flex-col gap-6'>
                 <iframe
                   src='https://open.spotify.com/embed/album/6bPpXqJRpjwy0hLyUGtzYc?utm_source=generator'
                   width='100%'
@@ -124,23 +164,126 @@ function App() {
                   loading='lazy'
                 ></iframe>
 
-                <div className='lets-talk-button'></div>
+                <div className='lets-talk-button font-bold mt-4'>
+                  Let's Talk Music
+                </div>
+
+                <div className='flex mx-auto gap-2 text-white'>
+                  <div className='hover:text-[#00bf63]'>
+                    <BsTwitter size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <BsInstagram size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <FaSnapchatGhost size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <FaMusic size={30} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div id='writing' className='slide'>
-            <h3>Writing</h3>
+          <div id='writing' className='slide py-20'>
+            <div className='w-[90%] mx-auto'>
+              <h2 className='text-xl text-[#9d5a4d] mb-32'>Writing</h2>
+              <Swiper
+                direction='horizontal'
+                slidesPerView={3}
+                spaceBetween={30}
+                modules={[Navigation, Mousewheel, Keyboard]}
+                mousewheel={{
+                  releaseOnEdges: true,
+                  forceToAxis: true,
+                  thresholdDelta: 10,
+                  thresholdTime: 500,
+                }}
+                keyboard={true}
+                navigation={true}
+                className='writing-swiper'
+              >
+                {writingArray.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className='writing-item'>
+                      <h3>{item.title}</h3>
+                      <p>{item.content}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-            <div className='writing-items'>
-              <div className='writing-item'></div>
+              <div className='lets-talk-button font-bold mt-6'>
+                Let's Talk Writing
+              </div>
+
+              <div className='flex justify-center mt-8 gap-2 text-white'>
+                <div className='hover:text-[#00bf63]'>
+                  <BsTwitter size={30} />
+                </div>
+                <div className='hover:text-[#00bf63]'>
+                  <BsInstagram size={30} />
+                </div>
+                <div className='hover:text-[#00bf63]'>
+                  <FaSnapchatGhost size={30} />
+                </div>
+                <div className='hover:text-[#00bf63]'>
+                  <FaMusic size={30} />
+                </div>
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div id='photography' className='slide'>
-            <h3>PHOTOGRAPHY</h3>
+          <div id='photography' className='slide py-20'>
+            <div className='w-[90%] mx-auto'>
+              <h2 className='text-xl text-white mb-4'>PHOTOGRAPHY</h2>
+
+              <Swiper
+                direction='horizontal'
+                slidesPerView={2}
+                spaceBetween={30}
+                modules={[Navigation, Mousewheel, Keyboard]}
+                mousewheel={{
+                  releaseOnEdges: true,
+                  forceToAxis: true,
+                  thresholdDelta: 10,
+                  thresholdTime: 500,
+                }}
+                keyboard={true}
+                navigation={true}
+                className='photos-swiper'
+              >
+                {images.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <img className='photo' src={item} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              <div className='flex gap-10 justify-center'>
+                <div className='lets-talk-button font-bold mt-6 !mx-0'>
+                  Let's Talk Photography
+                </div>
+
+                <div className='flex justify-center mt-8 gap-2 text-white'>
+                  <div className='hover:text-[#00bf63]'>
+                    <BsTwitter size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <BsInstagram size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <FaSnapchatGhost size={30} />
+                  </div>
+                  <div className='hover:text-[#00bf63]'>
+                    <FaMusic size={30} />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
