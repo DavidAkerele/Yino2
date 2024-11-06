@@ -75,12 +75,29 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #e6dad1;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.home-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  /* filter: blur(10px); */
+  opacity: 0.1;
+  z-index: 0;
 }
 
 .home-right {
   flex: 1;
   height: 100%;
-
+  z-index: 2;
   background-image: url('/image.png');
   background-size: cover;
   background-position: center;
@@ -226,5 +243,52 @@ nav {
 #contact {
   background-position: center;
   background-color: #9d5a4d;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-left {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #9d5a4d;
+}
+
+.contact-right {
+  position: relative;
+  flex: 0.8;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .foreground {
+    position: relative;
+    width: 80%; /* Adjust as needed for the zoomed effect */
+    height: auto;
+    z-index: 2; /* Bring the foreground image above the background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for a lifted effect */
+  }
+}
+
+.contact-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/image.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transform: scale(1.5);
   z-index: 0;
 }

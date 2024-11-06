@@ -80,6 +80,39 @@ function App() {
     'https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&w=600',
   ];
 
+  const thingsIAm = [
+    {
+      title: 'Musician',
+      description:
+        'I started playing the piano at the age of 10 and have since learned to play the guitar, drums, and violin. I have also learned to sing and produce music.',
+    },
+    {
+      title: 'Writer',
+      description:
+        'I have written several poems, short stories, and essays that have been published in various magazines and newspapers.',
+    },
+    {
+      title: 'Photographer',
+      description:
+        'I have been taking pictures since I was 12 and have since developed a keen eye for detail and composition.',
+    },
+    {
+      title: 'Designer',
+      description:
+        'I have designed several websites, logos, and posters for various clients and have received positive feedback for my work.',
+    },
+    {
+      title: 'Photographer',
+      description:
+        'I have been taking pictures since I was 12 and have since developed a keen eye for detail and composition.',
+    },
+    {
+      title: 'Designer',
+      description:
+        'I have designed several websites, logos, and posters for various clients and have received positive feedback for my work.',
+    },
+  ];
+
   return (
     <>
       <nav>
@@ -120,13 +153,38 @@ function App() {
       >
         <SwiperSlide>
           <div id='home' className='slide'>
-            <div className='home-left'></div>
+            <div className='home-left'>
+              <p className='hi-text'></p>
+              <h1 className='yinoluu-text'></h1>
+            </div>
             <div className='home-right'></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div id='about' className='slide'>
-            <div className='about-left'></div>
+            <div className='about-left'>
+              <h2>ABOUT ME...</h2>
+              <p>
+                I was born and raised in Lagos, Nigeria to a family that
+                appreciated all facets of the arts and so I dabbled in most of
+                them as a child. By the age of 10, I had begun to write, draw,
+                paint, play instruments, play sports, act, and even design
+                different things. As I grew older, those interests grew with me
+                and I deepened my knowledge, passion, and expertise by constant
+                learning and practice.
+              </p>
+
+              <h2>I'm a</h2>
+
+              <div className='grid-cols-2 grid'>
+                {thingsIAm.map((item, index) => (
+                  <div key={index} className=''>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className='about-right'>
               <img src='/image.png' alt='Person' className='foreground' />
             </div>
@@ -288,8 +346,17 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <div id='contact' className='slide'>
-            <div className='about-left'></div>
-            <div className='about-right'>
+            <div className='contact-left'>
+              <h1>I'd love to hear from you</h1>
+              <h2>let's get social</h2>
+              <h2>So many e-mail addresses... </h2>
+              <p>yinoluu@yinoluu.com</p>
+              <p>kiishi@yinoluu.com</p>
+              <p>music@yinoluu.com</p>
+              <p>writing@yinoluu.com</p>
+              <p>photography@yinoluu.com</p>
+            </div>
+            <div className='contact-right'>
               <img src='/image.png' alt='Person' className='foreground' />
             </div>
           </div>
