@@ -59,7 +59,7 @@ nav {
 }
 .active {
   background-color: #fff;
-  color: #000;
+  color: #b27d4a;
 }
 
 #home {
@@ -71,10 +71,6 @@ nav {
 .home-left {
   flex: 1;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #e6dad1;
   overflow: hidden;
   /* position: relative; */
 }
@@ -86,12 +82,14 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #e6dfd0;
+
   background-image: url('/image.png');
   background-size: cover;
   background-position: center;
   /* filter: blur(10px); */
   opacity: 0.1;
-  z-index: 0;
+  z-index: -10;
 }
 
 .home-right {

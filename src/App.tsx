@@ -153,18 +153,72 @@ function App() {
       >
         <SwiperSlide>
           <div id='home' className='slide'>
-            <div className='home-left'>
-              <p className='hi-text'></p>
-              <h1 className='yinoluu-text'></h1>
+            <div className='home-left flex flex-col justify-center items-center'>
+              <h1 className='text-white text-8xl font-bold italic mb-12'>
+                YINOLUU
+              </h1>
+              <p className='text-white text-xl mb-8'>
+                I'm a{' '}
+                <span className='text-[#b27d4a]'>
+                  Multi-Disciplinary Artist
+                </span>
+                ,<br />
+                and an all-round{' '}
+                <span className='text-[#b27d4a]'>Creative Consultant</span>
+              </p>
+              <button className='bg-[#f6f1ee] text-[#b27d4a] px-8 py-3 my-8 rounded-full font-medium hover:bg-[#b27d4a] hover:text-white transition-all'>
+                GET IN TOUCH!
+              </button>
+
+              <div className='flex mx-auto gap-2 text-white'>
+                <div className='hover:text-[#b27d4a] transition-all'>
+                  <BsTwitter size={30} />
+                </div>
+                <div className='hover:text-[#b27d4a] transition-all'>
+                  <BsInstagram size={30} />
+                </div>
+                <div className='hover:text-[#b27d4a] transition-all'>
+                  <FaSnapchatGhost size={30} />
+                </div>
+                <div className='hover:text-[#b27d4a] transition-all'>
+                  <FaMusic size={30} />
+                </div>
+              </div>
+              {/* <div className='flex gap-6 mt-8'>
+                <a
+                  href='#'
+                  className='text-white hover:text-[#b27d4a] transition-all'
+                >
+                  <i className='fab fa-twitter text-2xl'></i>
+                </a>
+                <a
+                  href='#'
+                  className='text-white hover:text-[#b27d4a] transition-all'
+                >
+                  <i className='fab fa-instagram text-2xl'></i>
+                </a>
+                <a
+                  href='#'
+                  className='text-white hover:text-[#b27d4a] transition-all'
+                >
+                  <i className='fab fa-snapchat text-2xl'></i>
+                </a>
+                <a
+                  href='#'
+                  className='text-white hover:text-[#b27d4a] transition-all'
+                >
+                  <i className='fab fa-facebook text-2xl'></i>
+                </a>
+              </div> */}
             </div>
             <div className='home-right'></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div id='about' className='slide'>
-            <div className='about-left'>
-              <h2>ABOUT ME...</h2>
-              <p>
+          <div id='about' className='slide '>
+            <div className='about-left flex flex-col justify-center px-12'>
+              <h2 className='text-white font-semibold'>ABOUT ME ...</h2>
+              <p className='text-white mt-4'>
                 I was born and raised in Lagos, Nigeria to a family that
                 appreciated all facets of the arts and so I dabbled in most of
                 them as a child. By the age of 10, I had begun to write, draw,
@@ -174,13 +228,15 @@ function App() {
                 learning and practice.
               </p>
 
-              <h2>I'm a</h2>
+              <h2 className='text-white font-semibold mt-8'>I'M A ...</h2>
 
-              <div className='grid-cols-2 grid'>
+              <div className='grid grid-cols-2 gap-8 mt-4'>
                 {thingsIAm.map((item, index) => (
-                  <div key={index} className=''>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                  <div key={index} className='bg-white/10 p-6 rounded-lg'>
+                    <h3 className='text-white font-medium text-xl mb-2'>
+                      {item.title}
+                    </h3>
+                    <p className='text-white'>{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -227,16 +283,16 @@ function App() {
                 </div>
 
                 <div className='flex mx-auto gap-2 text-white'>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <BsTwitter size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <BsInstagram size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <FaSnapchatGhost size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <FaMusic size={30} />
                   </div>
                 </div>
@@ -265,9 +321,11 @@ function App() {
               >
                 {writingArray.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className='writing-item'>
-                      <h3>{item.title}</h3>
-                      <p>{item.content}</p>
+                    <div className='writing-item text-center p-7 flex flex-col '>
+                      <h3 className='text-xl font-semibold text-white mb-4'>
+                        {item.title}
+                      </h3>
+                      <p className='text-white'>{item.content}</p>
                     </div>
                   </SwiperSlide>
                 ))}
@@ -278,16 +336,16 @@ function App() {
               </div>
 
               <div className='flex justify-center mt-8 gap-2 text-white'>
-                <div className='hover:text-[#00bf63]'>
+                <div className='hover:text-[#b27d4a] transition-all'>
                   <BsTwitter size={30} />
                 </div>
-                <div className='hover:text-[#00bf63]'>
+                <div className='hover:text-[#b27d4a] transition-all'>
                   <BsInstagram size={30} />
                 </div>
-                <div className='hover:text-[#00bf63]'>
+                <div className='hover:text-[#b27d4a] transition-all'>
                   <FaSnapchatGhost size={30} />
                 </div>
-                <div className='hover:text-[#00bf63]'>
+                <div className='hover:text-[#b27d4a] transition-all'>
                   <FaMusic size={30} />
                 </div>
               </div>
@@ -327,16 +385,16 @@ function App() {
                 </div>
 
                 <div className='flex justify-center mt-8 gap-2 text-white'>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <BsTwitter size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <BsInstagram size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <FaSnapchatGhost size={30} />
                   </div>
-                  <div className='hover:text-[#00bf63]'>
+                  <div className='hover:text-[#b27d4a] transition-all'>
                     <FaMusic size={30} />
                   </div>
                 </div>
@@ -346,15 +404,49 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <div id='contact' className='slide'>
-            <div className='contact-left'>
-              <h1>I'd love to hear from you</h1>
-              <h2>let's get social</h2>
-              <h2>So many e-mail addresses... </h2>
-              <p>yinoluu@yinoluu.com</p>
-              <p>kiishi@yinoluu.com</p>
-              <p>music@yinoluu.com</p>
-              <p>writing@yinoluu.com</p>
-              <p>photography@yinoluu.com</p>
+            <div className='contact-left flex flex-col items-center justify-center text-center text-white'>
+              <h1 className='text-5xl font-semibold mb-12'>
+                I'd love to hear from you!
+              </h1>
+              <h2 className='text-2xl font-semibold mb-8'>LET'S GET SOCIAL!</h2>
+              <div className='flex gap-6 mb-12'>
+                <BsTwitter
+                  size={24}
+                  className='hover:text-[#b27d4a] transition-all cursor-pointer'
+                />
+                <BsInstagram
+                  size={24}
+                  className='hover:text-[#b27d4a] transition-all cursor-pointer'
+                />
+                <FaSnapchatGhost
+                  size={24}
+                  className='hover:text-[#b27d4a] transition-all cursor-pointer'
+                />
+                <FaMusic
+                  size={24}
+                  className='hover:text-[#b27d4a] transition-all cursor-pointer'
+                />
+              </div>
+              <h2 className='text-2xl font-semibold mb-6'>
+                SO MANY E-MAIL ADDRESSES...
+              </h2>
+              <div className='flex flex-col gap-2'>
+                <p className='hover:text-[#b27d4a] transition-all cursor-pointer'>
+                  yinoluu@yinoluu.com
+                </p>
+                <p className='hover:text-[#b27d4a] transition-all cursor-pointer'>
+                  kiishi@yinoluu.com
+                </p>
+                <p className='hover:text-[#b27d4a] transition-all cursor-pointer'>
+                  music@yinoluu.com
+                </p>
+                <p className='hover:text-[#b27d4a] transition-all cursor-pointer'>
+                  writing@yinoluu.com
+                </p>
+                <p className='hover:text-[#b27d4a] transition-all cursor-pointer'>
+                  photography@yinoluu.com
+                </p>
+              </div>
             </div>
             <div className='contact-right'>
               <img src='/image.png' alt='Person' className='foreground' />
