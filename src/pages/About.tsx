@@ -36,7 +36,7 @@ const thingsIAm = [
 
 const About = () => {
   return (
-    <div id="about" className="min-h-screen mx-auto flex flex-col-reverse gap-6 lg:flex-row bg-[#9d5a4d]  px-6">
+    <div id="about" className="min-h-screen mx-auto flex flex-col-reverse gap-6 lg:flex-row bg-[#9d5a4d]  px-6 pb-8 lg:pb-0">
       {/* Left Content */}
       <div className="about-left flex flex-col justify-center lg:w-1/2 text-white">
         <h2 className="font-semibold text-4xl sm:text-5xl">ABOUT ME ...</h2>

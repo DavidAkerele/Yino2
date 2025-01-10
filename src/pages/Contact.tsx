@@ -38,7 +38,9 @@ const Contact: React.FC = () => {
   };
 
   // Handle input changes in the form fields
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { id, value } = e.target;
 
     setFormData((prevData) => ({
@@ -50,9 +52,9 @@ const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="h-screen w-full flex items-center justify-center pt-20 lg:pt-0 lg:flex-row flex-col"
+      className="flex flex-col mt-28 h-screen lg:mt-0 lg:min-h-screen lg:flex-row justify-center items-center min-h-screen text-white w-full"
     >
-      <div className="contact-left flex flex-col lg:flex-col w-full gap-8 items-center justify-center text-white text-center">
+      <div  className="home-left flex-1 flex flex-col justify-center items-center gap-8 text-center md:text-left p-6">
         <h1 className="text-7xl font-semibold mb-12">
           I'd love to hear from you!
         </h1>
@@ -191,8 +193,15 @@ const Contact: React.FC = () => {
         </div>
       )}
 
-      <div className="contact-right">
+      {/* <div className="contact-right">
         <img src={foot} alt="Person" className="foreground lg:block hidden" />
+      </div> */}
+      <div className="home-right flex-1 justify-center items-center bg-cover bg-center">
+        <img
+          src={foot}
+          alt="Yino"
+          className="w-full sm:w-4/5 md:w-full rounded-lg shadow-lg"
+        />
       </div>
     </div>
   );

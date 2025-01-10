@@ -23,8 +23,8 @@ const Writing = () => {
   ];
 
   return (
-    <div id="writing" className="w-full pt-4  min-h-screen bg-[#e6dad1] bg-center z-20">
-      <div className="w-[90%] mx-auto flex flex-col h-screen justify-center">
+    <div id="writing" className="w-full  h-screen bg-[#e6dad1] bg-center z-20">
+      <div className="w-[90%] mx-auto overflow-hidden flex flex-col h-screen justify-center">
         <h2 className="text-xl text-[#9d5a4d] mb-12">Writing</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">

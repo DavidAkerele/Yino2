@@ -10,16 +10,16 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex flex-col mt-28 h-screen lg:mt-0 lg:min-h-screen lg:flex-row justify-center items-center min-h-screen w-full"
+      className="flex flex-col mt-28 h-screen lg:mt-0 lg:min-h-screen lg:h-screen lg:flex-row justify-center items-center  w-full"
     >
       {/* Left Content */}
-      <div className="home-left flex-1 flex flex-col justify-center items-center gap-8 text-center md:text-left p-6">
+      <div className="home-left flex-1 flex flex-col justify-center items-center gap-6 text-center md:text-left p-6">
         <img
           src={whiteLogo}
           alt="Logo"
           className="w-3/4 mb-12 sm:w-2/4 md:w-3/4"
         />
-        <p className="text-[#9d5a4d] text-lg sm:text-xl md:text-2xl font-semibold">
+        <p className="text-[#9d5a4d] text-lg text-center sm:text-xl md:text-2xl font-semibold">
           I'm a <span className="font-bold">Multi-Disciplinary Artist</span>,
           <br />
           and an all-round{" "}
@@ -69,12 +69,8 @@ const Home = () => {
       </div>
 
       {/* Right Content */}
-      <div className="home-right flex-1 justify-center items-center bg-cover bg-center">
-        <img
-          src={yino}
-          alt="Yino"
-          className="w-full sm:w-4/5 md:w-full rounded-lg shadow-lg"
-        />
+      <div className="flex-1 justify-center overflow-hidden items-center bg-cover bg-center">
+        <img src={yino} alt="Yino" className="w-full  rounded-lg shadow-lg" />
       </div>
     </div>
   );
