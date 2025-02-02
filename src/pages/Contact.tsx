@@ -52,9 +52,9 @@ const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col mt-28 h-screen lg:mt-0 lg:min-h-screen lg:flex-row justify-center items-center min-h-screen text-white w-full"
+      className="flex flex-col pt-[350px] lg:pt-0 h-screen lg:mt-0 lg:min-h-screen lg:flex-row justify-center items-center min-h-screen text-white w-full"
     >
-      <div  className="home-left flex-1 flex flex-col justify-center items-center gap-8 text-center md:text-left p-6">
+      <div  className="home-left flex-1 flex flex-col justify-center items-center text-center md:text-left p-6">
         <h1 className="text-7xl font-semibold mb-12">
           I'd love to hear from you!
         </h1>
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center  justify-center z-50">
           <div className="bg-[#222121] p-8 rounded-lg mx-4 max-w-lg w-full">
             <button
               onClick={handleCloseModal}

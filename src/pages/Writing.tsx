@@ -3,47 +3,57 @@ import { FaMusic, FaSnapchatGhost } from "react-icons/fa";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 
 const Writing = () => {
-  // Writing items data
   const writingItems = [
     {
       title: "Writing Item 1",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
     },
     {
       title: "Writing Item 2",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
     },
     {
       title: "Writing Item 3",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptas.",
     },
   ];
 
   return (
-    <div id="writing" className="w-full  h-screen bg-[#e6dad1] bg-center z-20">
-      <div className="w-[90%] mx-auto overflow-hidden flex flex-col h-screen justify-center">
-        <h2 className="text-xl text-[#9d5a4d] mb-12">Writing</h2>
+    <div
+      id="writing"
+      className="w-full min-h-screen bg-[#e6dad1] flex items-center py-16"
+    >
+      <div className="w-[90%] mx-auto flex flex-col items-center">
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl text-[#9d5a4d] font-semibold mb-8 md:mb-12">
+          Writing
+        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
           {writingItems.map((item, index) => (
             <div
               key={index}
-              className="writing-item bg-[#00bf63] h-[500px] rounded-2xl overflow-hidden text-center p-7 flex flex-col"
+              className="writing-item bg-[#00bf63] min-h-[450px] rounded-2xl text-center p-6 flex flex-col justify-center items-center"
             >
-              <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
-              <p className="text-white">{item.content}</p>
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-4">
+                {item.title}
+              </h3>
+              <p className="text-white max-w-[85%] mx-auto">{item.content}</p>
             </div>
           ))}
         </div>
 
-        <div className="lets-talk-button font-bold mt-6 text-center text-[#00bf63]">
+        {/* Button */}
+        <div className="mt-8 md:mt-10 text-[#00bf63] font-bold text-lg cursor-pointer hover:text-[#b27d4a] transition">
           Let's Talk Writing
         </div>
 
-        <div className="flex justify-center mt-8 gap-6 text-white">
+        {/* Social Icons */}
+        <div className="flex justify-center mt-6 md:mt-8 gap-4 md:gap-6 text-white">
           <div className="hover:text-[#b27d4a] transition-all">
             <BsTwitter size={30} />
           </div>

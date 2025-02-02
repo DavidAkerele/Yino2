@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { FaFacebook, FaSnapchatGhost } from "react-icons/fa";
+import { FaSpotify, FaSnapchatGhost } from "react-icons/fa";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import whiteLogo from "../assets/whitelogo.png";
 import yino from "../assets/image.png";
@@ -10,14 +10,14 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex flex-col mt-28 h-screen lg:mt-0 lg:min-h-screen lg:h-screen lg:flex-row justify-center items-center  w-full"
+      className="flex flex-col  h-screen lg:mt-0 lg:max-h-screen  lg:flex-row justify-center items-center  w-full overflow-hidden"
     >
       {/* Left Content */}
-      <div className="home-left flex-1 flex flex-col justify-center items-center gap-6 text-center md:text-left p-6">
+      <div className="home-left flex-1 flex flex-col justify-center items-center mt-4 gap-6 text-center md:text-left p-6">
         <img
           src={whiteLogo}
           alt="Logo"
-          className="w-3/4 mb-12 sm:w-2/4 md:w-3/4"
+          className="w-3/4 mb-4 sm:w-2/4 md:w-3/4"
         />
         <p className="text-[#9d5a4d] text-lg text-center sm:text-xl md:text-2xl font-semibold">
           I'm a <span className="font-bold">Multi-Disciplinary Artist</span>,
@@ -63,7 +63,7 @@ const Home = () => {
             rel="noopener noreferrer"
             className="hover:text-[#b27d4a] transition-all"
           >
-            <FaFacebook size={30} />
+            <FaSpotify size={30} />
           </a>
         </div>
       </div>

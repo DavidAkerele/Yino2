@@ -7,6 +7,7 @@ import Music from "./pages/Music";
 import Writing from "./pages/Writing";
 import Photography from "./pages/Photography";
 import Contact from "./pages/Contact";
+import Architecture from "./pages/Architecture";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/music" element={<Music />} />
           <Route path="/writing" element={<Writing />} />
           <Route path="/photography" element={<Photography />} />
+          <Route path="/architecture" element={<Architecture />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         {/* <div style={{ marginTop: '10px' }}> 

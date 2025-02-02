@@ -1,6 +1,7 @@
 import React from "react";
-import { FaMusic, FaSnapchatGhost } from "react-icons/fa";
+import { FaSoundcloud, FaSpotify } from "react-icons/fa";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
+
 import musicImage1 from "../assets/musicimg/musicImage1.jpg";
 import musicImage2 from "../assets/musicimg/musicImage2.jpg";
 import musicImage3 from "../assets/musicimg/musicImage3.jpg";
@@ -70,30 +71,36 @@ const creditImages = [
 
 const Music = () => {
   return (
-    <div id="music" className="bg-[#bfcbd8] bg-center z-30 mx-auto h-auto py-20">
-      <h2 className="text-[#4a7cb2] w-[90%] mx-auto mb-8 text-xl font-medium">
+    <div
+      id="music"
+      className="bg-[#bfcbd8] bg-center  z-30 mx-auto h-auto pt-28 pb-4"
+    >
+      <h2 className="text-[#4a7cb2] w-[95%] mx-auto mb-8 text-4xl font-bold ">
         MUSIC
       </h2>
       <div className="w-full mx-auto mb-24 lg:w-[95%] lg:flex justify-between items-center gap-4">
-        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-3 p-6 gap-4">
-          {musicImages.map((src, index) => (
-            <div key={index} className="music-grid-item ">
-              <img
-                src={src}
-                alt={`Music Track ${index + 1}`}
-                className="w-full h-auto"
-              />
-            </div>
-          ))}
+        <div className="w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] pr-2">
+          <div className="grid grid-cols-1 lg:grid-cols-3 grid-flow-col lg:grid-flow-row auto-cols-[80%] sm:auto-cols-[50%] md:auto-cols-[30%] lg:auto-cols-[30%] gap-4 overflow-x-auto ">
+            {musicImages.map((src, index) => (
+              <div key={index} className="">
+                <img
+                  src={src}
+                  alt={`Music Track ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
         <div className="music-right px-6 lg:px-0 w-full lg:w-[40%] h-auto flex flex-col gap-6 mt-6 lg:mt-0">
           <iframe
             src="https://open.spotify.com/embed/album/6bPpXqJRpjwy0hLyUGtzYc?utm_source=generator"
             width="100%"
-            height="400"
+            height="619"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
-            className="w-full"
+            className="w-full rounded-2xl"
           ></iframe>
 
           <div className="lets-talk-button font-bold mt-4 text-center cursor-pointer hover:text-[#b27d4a]">
@@ -108,15 +115,16 @@ const Music = () => {
               <BsInstagram size={30} />
             </div>
             <div className="hover:text-[#b27d4a] transition-all">
-              <FaSnapchatGhost size={30} />
+              <FaSpotify size={30} />
             </div>
             <div className="hover:text-[#b27d4a] transition-all">
-              <FaMusic size={30} />
+              <FaSoundcloud size={30} />
             </div>
           </div>
         </div>
       </div>
-      <h2 className="text-[#4a7cb2] w-[90%] uppercase mx-auto mb-8 text-xl font-medium">
+
+      <h2 className="text-[#4a7cb2] w-[95%] uppercase mx-auto mb-8 text-4xl font-bold">
         Producer Credits
       </h2>
       <div className="w-full mx-auto lg:w-[95%] lg:flex justify-between items-center gap-4">
@@ -126,7 +134,7 @@ const Music = () => {
               <img
                 src={src}
                 alt={`Music Track ${index + 1}`}
-                className="w-full h-auto"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
@@ -135,12 +143,11 @@ const Music = () => {
           <iframe
             src="https://open.spotify.com/embed/album/2xpgb8R0BXVS2e1XnXI9xZ?utm_source=generator"
             width="100%"
-            height="400"
+            height="619"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             className="w-full"
           ></iframe>
-          
 
           <div className="lets-talk-button font-bold mt-4 text-center cursor-pointer hover:text-[#b27d4a]">
             Let's Talk Music
@@ -154,10 +161,10 @@ const Music = () => {
               <BsInstagram size={30} />
             </div>
             <div className="hover:text-[#b27d4a] transition-all">
-              <FaSnapchatGhost size={30} />
+              <FaSpotify size={30} />
             </div>
             <div className="hover:text-[#b27d4a] transition-all">
-              <FaMusic size={30} />
+              <FaSoundcloud size={30} />
             </div>
           </div>
         </div>

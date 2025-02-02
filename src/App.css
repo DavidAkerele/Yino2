@@ -107,7 +107,7 @@ nav ul li:hover {
 
 .about-right {
   position: relative;
-  width: 50%; 
+  /* width: 50%;  */
   flex: 1;
   height: 80%;
   overflow: hidden;
