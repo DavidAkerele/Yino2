@@ -79,7 +79,7 @@ const Music = () => {
         Music
       </h2>
       <div className="w-full mx-auto lg:w-[95%] lg:flex justify-between items-center gap-4 ">
-        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+        <div className="music-grid-container w-full  lg:w-[70%] lg:max-h-[calc(100vh_-_200px)] max-h-[calc(100vh_-_550px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
           {musicImages.map((src, index) => (
             <div key={index} className="music-grid-item">
               <img
@@ -125,7 +125,7 @@ const Music = () => {
         Producer Credits
       </h2>
       <div className="w-full mx-auto lg:w-[95%] lg:flex justify-between items-center gap-4">
-        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+        <div className="music-grid-container w-full lg:w-[70%] lg:max-h-[calc(100vh_-_200px)] max-h-[calc(100vh_-_550px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
           {creditImages.map((src, index) => (
             <div key={index} className="music-grid-item">
               <img

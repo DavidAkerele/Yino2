@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed left-1/2 transform -translate-x-1/2 lg:top-6 w-3/4 lg:w-[90%] max-w-7xl bg-opacity-30 backdrop-blur-lg bg-black z-50 shadow-xl rounded-xl flex items-center justify-between px-4 py-3">
+    <nav className="fixed left-1/2 transform -translate-x-1/2 top-4 lg:top-6 w-3/4 lg:w-[90%] max-w-7xl bg-opacity-30 backdrop-blur-lg bg-black z-50 shadow-xl rounded-xl flex items-center justify-between px-4 py-3">
       {/* Left side - Logo */}
       <div className="flex items-center space-x-4">
         <NavLink to="/" className={({ isActive }) => `text-lg text-white px-4 rounded-md ${isActive ? "font-semibold bg-transparent" : "hover:bg-transparent hover:text-white"} transition-all duration-300`}>
