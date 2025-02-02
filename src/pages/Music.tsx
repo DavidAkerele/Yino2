@@ -73,29 +73,27 @@ const Music = () => {
   return (
     <div
       id="music"
-      className="bg-[#bfcbd8] bg-center  z-30 mx-auto h-auto pt-28 pb-4"
+      className="bg-[#bfcbd8] bg-center gap-16 flex flex-col  z-30 mx-auto h-auto pt-28 pb-4"
     >
-      <h2 className="text-[#4a7cb2] w-[95%] mx-auto mb-8 text-4xl font-bold ">
-        MUSIC
+      <h2 className="text-[#4a7cb2] w-[95%] uppercase mx-auto mb-8 text-4xl font-bold">
+        Music
       </h2>
-      <div className="w-full mx-auto mb-24 lg:w-[95%] lg:flex justify-between items-center gap-4">
-        <div className="w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] pr-2">
-          <div className="grid grid-cols-1 lg:grid-cols-3 grid-flow-col lg:grid-flow-row auto-cols-[80%] sm:auto-cols-[50%] md:auto-cols-[30%] lg:auto-cols-[30%] gap-4 overflow-x-auto ">
-            {musicImages.map((src, index) => (
-              <div key={index} className="">
-                <img
-                  src={src}
-                  alt={`Music Track ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+      <div className="w-full mx-auto lg:w-[95%] lg:flex justify-between items-center gap-4 ">
+        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+          {musicImages.map((src, index) => (
+            <div key={index} className="music-grid-item">
+              <img
+                src={src}
+                alt={`Music Track ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          ))}
         </div>
 
         <div className="music-right px-6 lg:px-0 w-full lg:w-[40%] h-auto flex flex-col gap-6 mt-6 lg:mt-0">
           <iframe
-            src="https://open.spotify.com/embed/album/6bPpXqJRpjwy0hLyUGtzYc?utm_source=generator"
+            src="https://open.spotify.com/embed/album/2xpgb8R0BXVS2e1XnXI9xZ?utm_source=generator"
             width="100%"
             height="619"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -107,7 +105,7 @@ const Music = () => {
             Let's Talk Music
           </div>
 
-          <div className="flex justify-center gap-2 text-white">
+          <div className="flex justify-center gap-2 text-white mt-4">
             <div className="hover:text-[#b27d4a] transition-all">
               <BsTwitter size={30} />
             </div>
@@ -123,22 +121,22 @@ const Music = () => {
           </div>
         </div>
       </div>
-
       <h2 className="text-[#4a7cb2] w-[95%] uppercase mx-auto mb-8 text-4xl font-bold">
         Producer Credits
       </h2>
       <div className="w-full mx-auto lg:w-[95%] lg:flex justify-between items-center gap-4">
-        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-3 p-6 gap-4">
+        <div className="music-grid-container w-full lg:w-[70%] max-h-[calc(100vh_-_200px)] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
           {creditImages.map((src, index) => (
-            <div key={index} className="music-grid-item ">
+            <div key={index} className="music-grid-item">
               <img
                 src={src}
                 alt={`Music Track ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
           ))}
         </div>
+
         <div className="music-right px-6 lg:px-0 w-full lg:w-[40%] h-auto flex flex-col gap-6 mt-6 lg:mt-0">
           <iframe
             src="https://open.spotify.com/embed/album/2xpgb8R0BXVS2e1XnXI9xZ?utm_source=generator"
@@ -146,14 +144,14 @@ const Music = () => {
             height="619"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
-            className="w-full"
+            className="w-full rounded-2xl"
           ></iframe>
 
           <div className="lets-talk-button font-bold mt-4 text-center cursor-pointer hover:text-[#b27d4a]">
             Let's Talk Music
           </div>
 
-          <div className="flex justify-center gap-2 text-white">
+          <div className="flex justify-center gap-2 text-white mt-4">
             <div className="hover:text-[#b27d4a] transition-all">
               <BsTwitter size={30} />
             </div>

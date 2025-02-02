@@ -42,7 +42,7 @@ const smallImages = images.map((img) => ({
 
 const Photography: React.FC = () => {
   return (
-    <div className="mx-auto w-full flex flex-col pt-[80px] h-screen items-center justify-center bg-[#222121] z-10">
+    <div className="mx-auto w-full flex flex-col pt-[100px] min-h-screen pb-4 items-center justify-center bg-[#222121] z-10">
       <div className="w-[90%] h-screen flex flex-col justify-center gap-12 mx-auto">
         <h2 className="text-white text-3xl font-semibold mb-4">ARCHITECTURE</h2>
         

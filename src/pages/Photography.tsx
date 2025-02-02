@@ -96,8 +96,8 @@ const smallImages = images.map((img) => ({
 
 const Photography: React.FC = () => {
   return (
-    <div className="mx-auto w-full pt-[80px] h-screen flex flex-col items-center justify-center bg-[#222121] z-10">
-      <div className="w-[90%] h-screen flex flex-col justify-center gap-12 mx-auto">
+    <div className="mx-auto w-full pt-[100px] min-h-screen pb-4 flex flex-col items-center justify-center bg-[#222121] z-10 overflow-hidden">
+      <div className="w-[90%]  flex flex-col justify-center gap-12 mx-auto">
         <h2 className="text-white text-3xl font-semibold uppercase mb-4">
           Photography
         </h2>

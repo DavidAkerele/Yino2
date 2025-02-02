@@ -13,7 +13,6 @@ interface ContactFormData {
 
 const Contact: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  // const [selectedEmail, setSelectedEmail] = useState<string>("yinoluu@yinoluu.com");
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -23,9 +22,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Handle form submission here (e.g., send email via backend or third-party service)
     console.log(formData);
-    // Close the modal after submission
     setIsModalOpen(false);
   };
 
@@ -37,7 +34,6 @@ const Contact: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  // Handle input changes in the form fields
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -52,13 +48,15 @@ const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col pt-[350px] lg:pt-0 h-screen lg:mt-0 lg:min-h-screen lg:flex-row justify-center items-center min-h-screen text-white w-full"
+      className="flex flex-col lg:flex-row pt-[0px] lg:pt-0 h-screen lg:mt-0 lg:min-h-screen justify-center items-center min-h-screen text-white w-full"
     >
-      <div  className="home-left flex-1 flex flex-col justify-center items-center text-center md:text-left p-6">
-        <h1 className="text-7xl font-semibold mb-12">
+      <div className="home-left flex-1 flex flex-col justify-center items-center text-center md:text-left p-6">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-12">
           I'd love to hear from you!
         </h1>
-        <h2 className="text-2xl font-semibold mb-8">LET'S GET SOCIAL!</h2>
+        <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-8">
+          LET'S GET SOCIAL!
+        </h2>
         <div className="flex gap-6 mb-12">
           <BsTwitter
             size={24}
@@ -78,7 +76,9 @@ const Contact: React.FC = () => {
           />
         </div>
 
-        <h2 className="text-2xl font-semibold mb-6">GET IN TOUCH</h2>
+        <h2 className="text-xl md:text-2xl lg:text-2xl font-semibold mb-6">
+          GET IN TOUCH
+        </h2>
 
         {/* Button to open modal */}
         <button
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center  justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-[#222121] p-8 rounded-lg mx-4 max-w-lg w-full">
             <button
               onClick={handleCloseModal}
@@ -106,10 +106,7 @@ const Contact: React.FC = () => {
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="w-full ">
               <div className="flex flex-col gap-4 mb-6">
-                <label
-                  htmlFor="name"
-                  className="text-lg font-semibold text-white"
-                >
+                <label htmlFor="name" className="text-lg font-semibold text-white">
                   Name
                 </label>
                 <input
@@ -123,10 +120,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex flex-col gap-4 mb-6">
-                <label
-                  htmlFor="email"
-                  className="text-lg font-semibold text-white"
-                >
+                <label htmlFor="email" className="text-lg font-semibold text-white">
                   Your Email
                 </label>
                 <input
@@ -140,10 +134,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex flex-col gap-4 mb-6">
-                <label
-                  htmlFor="email-dropdown"
-                  className="text-lg font-semibold text-white"
-                >
+                <label htmlFor="email-dropdown" className="text-lg font-semibold text-white">
                   Select Email
                 </label>
                 <select
@@ -152,25 +143,16 @@ const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   className="p-2 rounded-md bg-[#333] text-white"
                 >
-                  <option value="yinoluu@yinoluu.com">
-                    yinoluu@yinoluu.com
-                  </option>
+                  <option value="yinoluu@yinoluu.com">yinoluu@yinoluu.com</option>
                   <option value="kiishi@yinoluu.com">kiishi@yinoluu.com</option>
                   <option value="music@yinoluu.com">music@yinoluu.com</option>
-                  <option value="writing@yinoluu.com">
-                    writing@yinoluu.com
-                  </option>
-                  <option value="photography@yinoluu.com">
-                    photography@yinoluu.com
-                  </option>
+                  <option value="writing@yinoluu.com">writing@yinoluu.com</option>
+                  <option value="photography@yinoluu.com">photography@yinoluu.com</option>
                 </select>
               </div>
 
               <div className="flex flex-col gap-4 mb-6">
-                <label
-                  htmlFor="message"
-                  className="text-lg font-semibold text-white"
-                >
+                <label htmlFor="message" className="text-lg font-semibold text-white">
                   Your Message
                 </label>
                 <textarea
@@ -193,10 +175,8 @@ const Contact: React.FC = () => {
         </div>
       )}
 
-      {/* <div className="contact-right">
-        <img src={foot} alt="Person" className="foreground lg:block hidden" />
-      </div> */}
-      <div className="home-right flex-1 justify-center items-center bg-cover bg-center">
+      {/* Right Image */}
+      <div className="home-right flex-1 justify-center items-center bg-cover bg-center lg:block hidden">
         <img
           src={foot}
           alt="Yino"
